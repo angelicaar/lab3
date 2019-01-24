@@ -13,8 +13,14 @@
    the CSS to the page. feel free to remove it once the link is working. */
 body {
      border: 1px dotted gray;
-     padding: 20px;
+     padding: 20px; 
+     background-color: #c7c7f5;
 }
+.jumbotron p.active {
+     color: #1f6ddd;
+}
+
+
 
 .jumbotron {
 	position: relative;
