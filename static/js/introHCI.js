@@ -9,13 +9,16 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$("#testjs").click(function(e) {
+	$("#testjs").click(function(e) {   
 		$('.jumbotron h1').text("Yay! You Clicked a Button!");
 		$("#testjs").text("Please wait...");
 		$("#testjs").toggleClass("active");
 		$(".jumbotron p").addClass("active");
 		$('#myelement').click(changeText);
+
 	}); 
+
+$("a.thumbnail").click(projectClick);
 
 function projectClick(e){
 	console.log("Project clicked");
@@ -28,15 +31,18 @@ function projectClick(e){
     	var containingProject = $(this).closest(".project");
     var description = $(containingProject).find(".project-description");
     if (description.length == 0) {
-       $(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
-    } else {
-       description.html("<p>Stop clicking on me! You just did it at " + (new Date()) + "</p>");
+       $(containingProject).append("<div class='project-description'><p> Just something I do for fun</p></div>");
     }
-}
+     description.fadeOut();
+    
+} 
+
+
    
 
 
-	$("a.thumbnail").click(projectClick); 
+	 
+
 
 
 	
